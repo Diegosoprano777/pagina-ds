@@ -1,14 +1,12 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ds-Tecnology</title>
 
   <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Íconos de Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
@@ -44,13 +42,12 @@
       color: #0a58ca; /* azul al pasar el mouse */
     }
   </style>
-  
 </head>
 
 <body>
 
   <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
     <div class="container-fluid">
       <a class="navbar-brand ms-4 fw-bold" href="#">Ds-Tecnology</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -59,14 +56,14 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-       <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-  <li class="nav-item"><a class="nav-link " href="index.html">INICIO</a></li>
-  <li class="nav-item"><a class="nav-link" href="nosotros.html">NOSOTROS</a></li>
-  <li class="nav-item"><a class="nav-link" href="servicios.html">SERVICIOS</a></li>
-  <li class="nav-item"><a class="nav-link" href="portafolio.html">PORTAFOLIO</a></li>
-   <li class="nav-item"><a class="nav-link" href="contact.html">CONTACTO2</a></li>
-  <li class="nav-item"><a class="nav-link active" href="contacto.html">CONTACTO</a></li>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">INICIO</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros.html">NOSOTROS</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicios.html">SERVICIOS</a></li>
+          <li class="nav-item"><a class="nav-link" href="portafolio.html">PORTAFOLIO</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">CONTACTO2</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contacto.html">CONTACTO</a></li>
         </ul>
       </div>
     </div>
@@ -75,46 +72,71 @@
   <!-- Contenido principal -->
   <main class="container my-4">
     <h2 class="text-center mb-4">Formulario de contacto
-        <i class="bi bi-pc-display text-danger"></i>
+      <i class="bi bi-pc-display text-danger"></i>
     </h2>
-    <p class="text-center"> Cuentanos sobre tu proyecto y te contacto menos de 48 horas</p>
-    
-    
-    <form>
-      <form class="needs validation" novalidate></form>
+    <p class="text-center">Cuéntanos sobre tu proyecto y te contactamos en menos de 48 horas</p>
+
+    <!-- Formulario con validación -->
+    <form class="needs-validation" novalidate>
       <div class="row">
-        <div class ="hass validtation"></div>
-        <input class="form-control mb-3 form-control-lg" type="text" id="campo_nombre" placeholder="Nombre completo">
-        <div class="valid-feedback">Nombre Registrado </div>
-        <div class="invalid-feedback">Por favor escriba su Nombre</div>
-        <input class="form-control mb-3 form-control-lg" type="email" id="campo_email" placeholder="E-mail">
-        <div class="valid-feedback">E-mail Registrado </div>
-        <div class="invalid-feedback">Por favor escriba su E-mail </div>
-        <input class="form-control mb-3 form-control-lg" type="text" id="campo_carro" placeholder="Servicio de interés">
-        <div class="valid-feedback">Escriba su Servicio de Interes</div>
-        <div class="invalid-feedback">No ha escrito su servicio de interes </div>
-        <textarea class="form-control mb-3 form-control-lg" id="campo_mensaje" rows="4"
-          placeholder="Escribe tu mensaje aquí"></textarea>
-        <button class="btn btn-danger btn-lg w-100" type="submit">Enviar</button>
+        <div class="col-12 mb-3">
+          <input class="form-control form-control-lg" type="text" id="campo_nombre" placeholder="Nombre completo" required>
+          <div class="valid-feedback">Nombre válido.</div>
+          <div class="invalid-feedback">Por favor, escriba su nombre.</div>
+        </div>
+
+        <div class="col-12 mb-3">
+          <input class="form-control form-control-lg" type="email" id="campo_email" placeholder="E-mail" required>
+          <div class="valid-feedback">E-mail válido.</div>
+          <div class="invalid-feedback">Por favor, escriba un E-mail válido.</div>
+        </div>
+
+        <div class="col-12 mb-3">
+          <input class="form-control form-control-lg" type="text" id="campo_servicio" placeholder="Servicio de interés" required>
+          <div class="valid-feedback">Servicio indicado.</div>
+          <div class="invalid-feedback">Por favor, escriba su servicio de interés.</div>
+        </div>
+
+        <div class="col-12 mb-3">
+          <textarea class="form-control form-control-lg" id="campo_mensaje" rows="4" placeholder="Escribe tu mensaje aquí" required></textarea>
+          <div class="valid-feedback">Mensaje listo.</div>
+          <div class="invalid-feedback">Por favor, escriba su mensaje.</div>
+        </div>
+
+        <div class="col-12">
+          <button class="btn btn-danger btn-lg w-100" type="submit">Enviar</button>
+        </div>
       </div>
     </form>
   </main>
 
   <!-- Footer -->
-  <footer class="container-fluid footer-gray p-5 text-center text-dark mt-auto">
-    <div class="row mb-3">
-      <div class="col">
-        <a href="#" class="text-decoration-none text-success">
-          <i class="b
-
-footer class="container-fluid footer-gray p-5 text-center text-dark">
-  <div class="row">
-    <div class="col">
-      
-    </div>
-  </div>
-
-  <div class="mt-4 text-light">
+  <footer class="container-fluid footer-gray p-5 text-center text-light mt-auto">
+    <div class="mt-4">
       © 2025 Ds-Tecnology 
-  </div>
-</footer>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (para validación y componentes) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script de validación -->
+  <script>
+    (() => {
+      'use strict'
+      const forms = document.querySelectorAll('.needs-validation')
+
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+          form.classList.add('was-validated')
+        }, false)
+      })
+    })()
+  </script>
+
+</body>
+</html>
